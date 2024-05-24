@@ -46,5 +46,5 @@ jobs:
 
       - name: Run tests
         run: |
-          # Adjust the command to run your tests
-          python -m unittest discover -s tests
+          python blog_project/manage.py migrate
+          python blog_project/manage.py test
