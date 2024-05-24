@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: blog-deployment
+spec:
+  replicas: 1
+  selector: # korrigera stavning av "selector"
+    matchLabels: # korrigera stavning av "matchLabels"
+      app: blog
+  template:
+    metadata:
+      labels:
+        app: blog
+    spec:
+      containers:
+        - name: blog
+          image: final-project-elin
+          ports:
+            - containerPort: 8000
