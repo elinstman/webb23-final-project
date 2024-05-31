@@ -4,8 +4,8 @@ metadata:
   name: blog-deployment
 spec:
   replicas: 1
-  selector: # korrigera stavning av "selector"
-    matchLabels: # korrigera stavning av "matchLabels"
+  selector:
+    matchLabels:
       app: blog
   template:
     metadata:
@@ -15,5 +15,6 @@ spec:
       containers:
         - name: blog
           image: final-project-elin
+          imagePullPolicy: Never
           ports:
             - containerPort: 8000
