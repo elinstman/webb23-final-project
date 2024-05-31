@@ -15,5 +15,6 @@ spec:
       containers:
         - name: blog
           image: final-project-elin
+          imagePullPolicy: Never
           ports:
             - containerPort: 8000
